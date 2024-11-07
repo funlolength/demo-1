@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication Successful - PRReview.ai</title>
+    <style>
+        :root {
+            --color-bg: #0f172a;
+            --color-primary: #8b5cf6;
+            --color-secondary: #6d28d9;
+            --color-text: #f8fafc;
+            --color-text-muted: #94a3b8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background: linear-gradient(to bottom right, #0f172a, #4c1d95, #0f172a);
+            color: var(--color-text);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 600px;
+            background-color: rgba(30, 41, 59, 0.5);
+            border: 1px solid rgba(139, 92, 246, 0.1);
+            border-radius: 0.5rem;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--color-primary);
+        }
+
+        p {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .token {
+            background-color: rgba(15, 23, 42, 0.3);
+            padding: 0.5rem 1rem;
+            border-radius: 0.25rem;
+            font-family: monospace;
+            word-break: break-all;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            margin-top: 1.5rem;
+            background-color: var(--color-primary);
+            color: var(--color-text);
+            text-decoration: none;
+            border-radius: 0.25rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: var(--color-secondary);
+        }
+
+        .back-to-home {
+            margin-top: 1rem;
+            text-align: center;
+        }
+
+        .back-to-home a {
+            color: var(--color-text-muted);
+            text-decoration: none;
+        }
+
+        .back-to-home a:hover {
+            color: var(--color-primary);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Authentication Successful!</h1>
+        <p>Your GitHub token has been successfully obtained and stored.</p>
+        <p>Token:</p>
+        <p class="token">{{ token }}</p>
+        <p>You can now start using the GitHub PR review system.</p>
+        <a href="/dashboard" class="button">Go to Dashboard</a>
+    </div>
+    <div class="back-to-home">
+        <a href="/">Back to Home</a>
+    </div>
+</body>
+</html>
